@@ -169,3 +169,12 @@ btnNext.addEventListener('click', () => {
 btnBack.addEventListener('click', () => {
   goToStep(currentStep - 1);
 });
+
+// --- Очищаем ошибку при вводе ---
+document.querySelectorAll('.input').forEach(input => {
+  input.addEventListener('input', () => {
+    input.classList.remove('invalid');
+    const errorId = input.id;
+    clearError(errorId);
+  });
+});
