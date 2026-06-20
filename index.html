@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Открыть счёт — FinDash</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="page">
+
+    <div class="form-card">
+
+      <div class="form-header">
+        <div class="logo">
+          <span class="logo-icon"></span>
+          FinDash
+        </div>
+        <h1 class="form-title">Открыть счёт онлайн</h1>
+      </div>
+
+      <!-- Прогресс-бар -->
+      <div class="progress">
+        <div class="progress-step active" data-step="1">
+          <div class="step-circle">1</div>
+          <span class="step-label">Личные данные</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="2">
+          <div class="step-circle">2</div>
+          <span class="step-label">Документы</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="3">
+          <div class="step-circle">3</div>
+          <span class="step-label">Подтверждение</span>
+        </div>
+      </div>
+
+      <!-- Шаг 1 -->
+      <div class="step" id="step-1">
+        <div class="field">
+          <label class="label" for="name">Имя и фамилия</label>
+          <input class="input" type="text" id="name" placeholder="Азиз Жакыпов" />
+          <span class="error" id="error-name"></span>
+        </div>
+        <div class="field">
+          <label class="label" for="phone">Номер телефона</label>
+          <input class="input" type="tel" id="phone" placeholder="+996 700 000 000" />
+          <span class="error" id="error-phone"></span>
+        </div>
+        <div class="field">
+          <label class="label" for="email">Email</label>
+          <input class="input" type="email" id="email" placeholder="aziz@example.com" />
+          <span class="error" id="error-email"></span>
+        </div>
+      </div>
+
+      <!-- Шаг 2 -->
+      <div class="step hidden" id="step-2">
+        <div class="field">
+          <label class="label" for="passport">Номер паспорта</label>
+          <input class="input" type="text" id="passport" placeholder="AN 1234567" />
+          <span class="error" id="error-passport"></span>
+        </div>
+        <div class="field">
+          <label class="label" for="inn">ИНН</label>
+          <input class="input" type="text" id="inn" placeholder="12345678901234" />
+          <span class="error" id="error-inn"></span>
+        </div>
+        <div class="field">
+          <label class="label" for="address">Адрес проживания</label>
+          <input class="input" type="text" id="address" placeholder="г. Бишкек, ул. Манаса 1" />
+          <span class="error" id="error-address"></span>
+        </div>
+      </div>
+
+      <!-- Шаг 3 -->
+      <div class="step hidden" id="step-3">
+        <div class="confirm-list" id="confirm-list">
+          <!-- заполняется через JS -->
+        </div>
+        <div class="field checkbox-field">
+          <input type="checkbox" id="agree" />
+          <label for="agree" class="checkbox-label">Я согласен с условиями обслуживания</label>
+        </div>
+        <span class="error" id="error-agree"></span>
+      </div>
+
+      <!-- Финальный экран -->
+      <div class="step hidden" id="step-success">
+        <div class="success">
+          <div class="success-icon">✓</div>
+          <h2 class="success-title">Заявка отправлена!</h2>
+          <p class="success-text">Мы свяжемся с вами в течение 1 рабочего дня.</p>
+        </div>
+      </div>
+
+      <!-- Кнопки -->
+      <div class="form-actions" id="form-actions">
+        <button class="btn btn-secondary hidden" id="btn-back">Назад</button>
+        <button class="btn btn-primary" id="btn-next">Далее</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
